@@ -1,0 +1,214 @@
+@font-face {
+  font-family: poppins;
+  src: url(./Assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: BebasNeue;
+  src: url(./Assets/fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: Chewy;
+  src: url(./Assets/fonts//Chewy-Regular.ttf);
+}
+@font-face {
+  font-family: Daysone;
+  src: url(./Assets/fonts/DaysOne-Regular.ttf);
+}
+@font-face {
+  font-family: Moul;
+  src: url(./Assets/fonts/Moul-Regular.ttf);
+}
+@font-face {
+  font-family: Righteous;
+  src: url(./Assets/fonts/Righteous-Regular.ttf);
+}
+
+.App {
+  font-family: poppins;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 111;
+  background-color: #f6f6fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+}
+.nav-bar_logo img {
+  width: 8rem;
+  height: 4.5rem;
+}
+
+.hamburger-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  transition: 0.5s;
+  margin: 0.5rem 0 0 0;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-menu ul li {
+  display: inline;
+  position: relative;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.nav-menu ul li a:hover {
+  color: #daa450;
+}
+.nav-menu ul li a:hover::after,
+.nav-menu ul li a.active::after {
+  content: "";
+  width: 1.5rem;
+  height: 0.2rem;
+  background: #daa450;
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0.1rem;
+  transition: 0.3s ease;
+}
+
+.Footer {
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: #daa450;
+}
+.Footer p {
+  color: #fff;
+  text-align: center;
+}
+
+/* Products card */
+.Products {
+  padding: 4.5rem 2rem;
+}
+.Products-header h1 {
+  text-transform: capitalize;
+}
+.Products-header p {
+  text-transform: capitalize;
+  color: #daa450;
+}
+.products {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 2.5rem 1.5rem;
+}
+.card {
+  width: 200px;
+  height: 300px;
+  border: 1px solid #daa450;
+  border-radius: 0.3rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+.card .card-img img {
+  height: 12.5rem;
+  width: 100%;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+.card-des_title p {
+  font-size: 0.7rem;
+}
+.card-des_price p {
+  color: #13a413;
+}
+.card-des_price p span {
+  text-decoration: line-through;
+}
+.card-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-btns .card-btns_buy-now button {
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #daa450;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  color: #f9edcb;
+}
+.card-btns_cart-btn button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #daa450;
+  font-weight: 800;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  .hamburger-icon {
+    display: block;
+  }
+
+  .nav-menu ul li a.active {
+    color: #fff;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #daa450;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2.7rem 0;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .nav-menu ul li a {
+    color: #fff;
+  }
+  .nav-menu ul li a:hover {
+    color: #fff;
+  }
+}

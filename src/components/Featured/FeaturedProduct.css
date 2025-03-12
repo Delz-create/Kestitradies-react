@@ -1,0 +1,13 @@
+.FeaturedProduct {
+  padding: 4.5rem 2rem;
+}
+.FeaturedProduct-header h1 {
+  text-transform: capitalize;
+}
+.FeaturedProduct-header p {
+  text-transform: capitalize;
+  color: #daa520;
+}
+.FeaturedProduct-products {
+  margin: 1.5rem 0;
+}

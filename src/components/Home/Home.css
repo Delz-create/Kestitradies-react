@@ -1,0 +1,43 @@
+.Hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 85vh;
+  background: url(../Home/images/herobg.JPG);
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 1rem 0 1rem;
+}
+.Hero h4 {
+  padding: 0 0 0.5rem 0;
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 3rem;
+  text-shadow: 10px 10px 9px #808080;
+}
+.Hero h2 {
+  color: #db4f36;
+  padding-bottom: -1.5rem;
+  font-weight: 800;
+  font-family: "Akaya Telivigala", cursive;
+  text-shadow: 10px 10px 9px #808080;
+}
+.Hero h1 {
+  color: #3f1b01;
+  font-family: "Akaya Telivigala", cursive;
+  text-shadow: 10px 10px 9px #808080;
+  margin-bottom: 2.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .Hero {
+    padding: 0 0 0 3rem;
+  }
+  .Hero h4 {
+    font-size: 3.5rem;
+    padding: 0 0 0.7rem 0;
+  }
+  .Hero h2 {
+    font-size: 2rem;
+  }
+}
