@@ -49,7 +49,11 @@
   width: 8rem;
   height: 4.5rem;
 }
-
+.nav-bar_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .hamburger-icon {
   display: none;
   font-size: 24px;
@@ -99,6 +103,107 @@
   transition: 0.3s ease;
 }
 
+/* Cart */
+.Cart {
+  display: flex;
+  flex-direction: column;
+}
+.Cart-main-content {
+  margin: 4.5rem auto;
+  width: 450px;
+}
+.cart-btn {
+  margin: 0 2.5rem 0 0;
+  position: relative;
+}
+.cart-btn button {
+  border: none;
+  background-color: transparent;
+}
+.cart-btn .cart-btn_icon {
+  font-size: 2rem;
+  color: #111;
+}
+.cart-btn_update {
+  position: absolute;
+  top: -25%;
+  right: -48%;
+  background-color: #daa450;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50%;
+  color: #fff;
+}
+.Cart-header h1 {
+  text-align: center;
+}
+hr {
+  margin: -0.5rem 0.6rem 1.5rem 0.6rem;
+}
+.cart-product li {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0.8rem 0;
+}
+.product-img img {
+  height: 6.5rem;
+  width: 4.5rem;
+}
+.cart-product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.cart-product-detail {
+  margin: 0 0.6rem 0 0.6rem;
+}
+.cart-product-title p {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+.cart-product-des p {
+  font-size: 0.5rem;
+  width: 9rem;
+}
+.aside {
+  margin: 0 1rem;
+}
+.quantity-controls button {
+  padding: 0.5rem;
+  margin: 0 0.5rem 0 0.5rem;
+  background-color: #daa450;
+}
+.checkout-btn button {
+  background-color: #daa450;
+  border: none;
+  width: 100%;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin: 0.8rem 0 0 0;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+.discount-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 1.2rem 0;
+}
+.discount-section-button button {
+  background-color: #daa450;
+  border-radius: 0.3rem;
+  padding: 0.7rem 0.5rem;
+  color: #fff;
+}
+.discount-section-input input {
+  border: 1px solid grey;
+  border-radius: 0.3rem;
+  padding: 0.7rem 0.5rem;
+  outline: noe;
+}
+.discount-section-input input:focus {
+  border: 1px solid #daa450;
+}
+/* Footer */
 .Footer {
   align-items: center;
   justify-content: space-between;

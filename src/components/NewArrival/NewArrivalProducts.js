@@ -4,7 +4,7 @@ import Product_8 from "./images/product_8.JPG";
 import Product_9 from "./images/product_9.JPG";
 import { CiShoppingCart } from "react-icons/ci";
 
-function NewArrivalProducts() {
+function NewArrivalProducts({ onAddToCart }) {
   const NewArrivalProducts = [
     {
       id: 1,
@@ -27,24 +27,24 @@ function NewArrivalProducts() {
   ];
   return (
     <div className="products">
-      {NewArrivalProducts.map((product) => (
+      {NewArrivalProducts.map((item) => (
         <div
           className="card"
-          key={product.id}>
+          key={item.id}>
           <div className="card-img">
             <img
-              src={product.img}
+              src={item.img}
               alt="product-img"
             />
           </div>
           <div className="card-des_title">
-            <p>{product.title}</p>
+            <p>{item.title}</p>
           </div>
 
           <div className="card-des_price">
             <p>
               <span>N</span>
-              {product.price}
+              {item.price}
             </p>
           </div>
 
@@ -54,7 +54,7 @@ function NewArrivalProducts() {
             </div>
 
             <div className="card-btns_cart-btn">
-              <button>
+              <button onClick={() => onAddToCart(item)}>
                 <CiShoppingCart />
               </button>
             </div>

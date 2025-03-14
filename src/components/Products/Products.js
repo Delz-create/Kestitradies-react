@@ -19,7 +19,7 @@ import Product_17 from "./images/product_17.JPG";
 import Product_18 from "./images/product_18.JPG";
 import { CiShoppingCart } from "react-icons/ci";
 
-function Products() {
+function Products({ onAddToCart }) {
   const products = [
     {
       id: 1,
@@ -132,25 +132,25 @@ function Products() {
   ];
   return (
     <div className="products">
-      {products.map((product) => (
+      {products.map((item) => (
         <div
           className="card"
-          key={product.id}>
+          key={item.id}>
           <div className="card-img">
             <img
-              src={product.img}
+              src={item.img}
               alt="product-img"
             />
           </div>
 
           <div className="card-des_title">
-            <p>{product.title}</p>
+            <p>{item.title}</p>
           </div>
 
           <div className="card-des_price">
             <p>
               <span>N</span>
-              {product.price}
+              {item.price}
             </p>
           </div>
 
@@ -160,7 +160,7 @@ function Products() {
             </div>
 
             <div className="card-btns_cart-btn">
-              <button>
+              <button onClick={() => onAddToCart(item)}>
                 <CiShoppingCart />
               </button>
             </div>
