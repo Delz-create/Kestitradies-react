@@ -32,7 +32,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.Hero-btn button {
+  padding: 0.5rem 2.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #111;
+  color: #feedda;
+}
 /* Navbar */
 .nav-bar {
   position: sticky;
@@ -110,7 +116,7 @@
 }
 .Cart-main-content {
   margin: 4.5rem auto;
-  width: 450px;
+  max-width: 400px;
 }
 .cart-btn {
   margin: 0 2.5rem 0 0;
@@ -137,10 +143,11 @@
   text-align: center;
 }
 hr {
-  margin: -0.5rem 0.6rem 1.5rem 0.6rem;
+  margin: -0.5rem 0.6rem 3.5rem 0.6rem;
 }
 .cart-product li {
-  display: flex;
+  display: grid;
+  align-items: center;
   align-items: center;
   margin: 0 0 0.8rem 0;
 }
@@ -150,8 +157,8 @@ hr {
 }
 .cart-product-details {
   display: flex;
-  justify-content: space-between;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
 }
 .cart-product-detail {
   margin: 0 0.6rem 0 0.6rem;
@@ -169,8 +176,16 @@ hr {
 }
 .quantity-controls button {
   padding: 0.5rem;
-  margin: 0 0.5rem 0 0.5rem;
+  margin: 0 0.5rem 1rem 0.5rem;
   background-color: #daa450;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+}
+.del-btn button {
+  border: none;
+  font-size: 1.5rem;
+  background-color: transparent;
 }
 .checkout-btn button {
   background-color: #daa450;
@@ -186,10 +201,11 @@ hr {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0 0 1.2rem 0;
+  margin: 2rem 0 1.2rem 0;
 }
 .discount-section-button button {
   background-color: #daa450;
+  border: none;
   border-radius: 0.3rem;
   padding: 0.7rem 0.5rem;
   color: #fff;
@@ -198,6 +214,7 @@ hr {
   border: 1px solid grey;
   border-radius: 0.3rem;
   padding: 0.7rem 0.5rem;
+
   outline: noe;
 }
 .discount-section-input input:focus {
@@ -281,6 +298,7 @@ button:hover {
 }
 
 /* Mobile Styles */
+
 @media only screen and (max-width: 768px) {
   .hamburger-icon {
     display: block;

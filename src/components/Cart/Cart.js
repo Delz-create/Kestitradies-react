@@ -3,11 +3,13 @@ import { CartContext } from "../CartContext";
 import { MdDelete } from "react-icons/md";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const { cartItems, setCartItems } = useContext(CartContext);
   const [discountCode, setDiscountCode] = useState("");
   const [discount, setDiscount] = useState(0);
+  const navigate = useNavigate();
 
   const handleDeleteItem = (itemId) => {
     setCartItems((prevCartItems) =>
@@ -99,12 +101,12 @@ function Cart() {
                         <p>N {item.price}</p>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="del-btn">
-                    <button onClick={() => handleDeleteItem(item.id)}>
-                      <MdDelete />
-                    </button>
+                    <div className="del-btn">
+                      <button onClick={() => handleDeleteItem(item.id)}>
+                        <MdDelete />
+                      </button>
+                    </div>
                   </div>
                 </li>
               </div>
@@ -127,10 +129,14 @@ function Cart() {
           </div>
         </div>
 
-        <p className="total">Total: ${discountedTotal.toFixed(2)}</p>
+        <p className="total">
+          Total: <span>N{discountedTotal.toFixed(2)}</span>
+        </p>
 
         <div className="checkout-btn">
-          <button>proceed to payment</button>
+          <button onClick={() => navigate("/Payment")}>
+            proceed to payment
+          </button>
         </div>
       </div>
 

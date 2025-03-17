@@ -18,7 +18,7 @@ function Home() {
         <h1>On all products</h1>
         <div className="Hero-btn">
           <Link to="/Shop">
-            <button>shop now</button>
+            <button>Shop Now</button>
           </Link>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Product_1 from "./images/product_1.JPG";
 import Product_2 from "./images/product_2.JPG";
 import Product_3 from "./images/product_3.JPG";
@@ -18,8 +18,19 @@ import Product_16 from "./images/product_16.JPG";
 import Product_17 from "./images/product_17.JPG";
 import Product_18 from "./images/product_18.JPG";
 import { CiShoppingCart } from "react-icons/ci";
+import { CartContext } from "../CartContext";
+import { useNavigate } from "react-router-dom";
 
 function Products({ onAddToCart }) {
+  const { setCartItems } = useContext(CartContext);
+
+  const navigate = useNavigate();
+
+  const handleBuyNow = (product) => {
+    setCartItems([{ ...product, quantity: 1 }]);
+
+    navigate("/Payment");
+  };
   const products = [
     {
       id: 1,
@@ -156,7 +167,7 @@ function Products({ onAddToCart }) {
 
           <div className="card-btns">
             <div className="card-btns_buy-now">
-              <button>buy now</button>
+              <button onClick={() => handleBuyNow(item)}>buy now</button>
             </div>
 
             <div className="card-btns_cart-btn">
