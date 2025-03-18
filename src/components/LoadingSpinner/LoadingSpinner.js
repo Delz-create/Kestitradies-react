@@ -1,14 +1,13 @@
 import React from "react";
-import { TailSpin } from "react-loader-spinner";
 import "./LoadingSpinner.css";
+import { ClipLoader } from "react-spinners";
 
 function LoadingSpinner() {
   return (
     <div className="loading-spinner">
-      <TailSpin
+      <ClipLoader
         color="#007bff"
-        height={50}
-        width={50}
+        size={50}
       />
     </div>
   );
